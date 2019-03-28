@@ -1,4 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Demo
+Project is still underway and in progress. See the demo here [Demo](https://www.themattperkins.com/counter-app/public/index.html)
 
 ## Available Scripts
 
