@@ -12,16 +12,26 @@ class App extends Component {
       { id: 4, value: 0 }
     ]
   };
+  constructor(props) {
+    super(props);
+    console.log("App-Constructor", this.props);
+    // this.state = this.props.something;
+  }
+  componentDidMount() {
+    // // Ajax call
+    // this.setState({ movies })
+    console.log("App-Mounted");
+  }
   handleIncrement = counter => {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
     counters[index] = { ...counter };
     counters[index].value++;
     this.setState({ counters });
-    console.log(this.state.counters[0]);
+    // console.log(this.state.counters[0]);
   };
   handleDelete = counterId => {
-    console.log("event handler called", counterId);
+    // console.log("event handler called", counterId);
     const counters = this.state.counters.filter(c => c.id !== counterId);
     this.setState({ counters });
   };
@@ -33,6 +43,7 @@ class App extends Component {
     this.setState({ counters });
   };
   render() {
+    console.log("App - Rendered");
     return (
       <React.Fragment>
         <NavBar

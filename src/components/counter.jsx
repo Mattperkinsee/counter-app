@@ -1,25 +1,28 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  
-
   /*using constructor to bind this to methods to access this*/
-//   constructor() {
-//     super();
-//     this.handleIncrement = this.handleIncrement.bind(this);
-//     this.handleDecrement = this.handleDecrement.bind(this);
-//   }
+  //   constructor() {
+  //     super();
+  //     this.handleIncrement = this.handleIncrement.bind(this);
+  //     this.handleDecrement = this.handleDecrement.bind(this);
+  //   }
 
-/*using inline method instead of constructor way*/
- 
-
+  /*using inline method instead of constructor way*/
+  componentDidUpdate(prevProps, prevState) {
+    console.log("prevProps", prevProps);
+    console.log("prevState", prevState);
+    if (prevProps.counter.value !== this.props.counter.value) {
+      //Ajax call get new data from server
+    }
+  }
   handleDecrement = () => {
     this.setState({ value: this.state.value - 1 });
-  }
+  };
   render() {
-    console.log(this.props);
+    // console.log(this.props);
+    console.log("Counter - Rendered");
     return (
-        
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
@@ -28,7 +31,12 @@ class Counter extends Component {
         >
           Increment
         </button>
-        <button onClick={() => this.props.onDelete(this.props.counter.id)} className="btn btn-danger btn-sm m-2">Delete</button>
+        <button
+          onClick={() => this.props.onDelete(this.props.counter.id)}
+          className="btn btn-danger btn-sm m-2"
+        >
+          Delete
+        </button>
       </div>
     );
   }
