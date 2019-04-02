@@ -1,6 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-##Demo
-Project is available here [React-Counter-App](https://www.themattperkins.com/React-Counter-App/build/index.html)
+
+## Demo
+
+Project demo is available here [React-Counter-App](https://www.themattperkins.com/React-Counter-App/build/index.html)
 
 ## Available Scripts
 
